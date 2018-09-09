@@ -1,0 +1,19 @@
+{
+  "id":{
+    "extractor": {
+      "name": "DummyIdExtractor",
+      "value": "FooId"
+    }
+  },
+  "fields":[
+    {
+      "name": "field1",
+      "extractor": {
+        "type": "SingleFieldExtractor",
+        "matchers": [
+          "bar", "baz"
+        ]
+      }
+    }
+  ]
+}

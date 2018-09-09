@@ -1,0 +1,35 @@
+{
+  "fields":[
+    {
+      "name": "field1",
+      "extractor": {
+        "type": "SingleFieldExtractor",
+        "matchers": [
+          {
+            "type": "FirstElementAttrMatcher",
+            "element": "div",
+            "attr": {
+              "key": "class",
+              "value": "bar"
+            }
+          },
+          {
+            "type": "FirstElementAttrMatcher",
+            "element": "div",
+            "attr": {
+              "key": "class",
+              "value": "baz"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "field2",
+      "extractor": {
+        "type": "ConcatMultiValueFieldExtractor",
+        "match"
+      }
+    }
+  ]
+}
