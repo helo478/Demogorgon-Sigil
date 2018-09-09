@@ -3,10 +3,10 @@
     {
       "name": "field1",
       "extractor": {
-        "type": "SingleFieldExtractor",
+        "type": "FirstFoundFieldExtractor",
         "matchers": [
           {
-            "type": "FirstElementAttrMatcher",
+            "type": "FirstFoundElementAttrMatcher",
             "element": "div",
             "attr": {
               "key": "class",
@@ -14,7 +14,7 @@
             }
           },
           {
-            "type": "FirstElementAttrMatcher",
+            "type": "FirstFoundElementAttrMatcher",
             "element": "div",
             "attr": {
               "key": "class",
@@ -27,8 +27,25 @@
     {
       "name": "field2",
       "extractor": {
-        "type": "ConcatMultiValueFieldExtractor",
-        "match"
+        "type": "ConcatAllFieldExtractor",
+        "matchers": [
+          {
+            "type": "AllElementAttrMatcher",
+            "element": "div",
+            "attr": {
+              "key": "class",
+              "value": "spam"
+            }
+          },
+          {
+            "type": "AllElementAttrMatcher",
+            "element": "div",
+            "attr": {
+              "key": "class",
+              "value": "eggs"
+            }
+          }
+        ]
       }
     }
   ]
